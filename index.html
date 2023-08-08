@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkierCon 2024</title>
+    <meta
+      name="description"
+      content="Konwent Letniego Chilloutu w Skierniewicach"
+    />
+    <meta name="author" content='Cech Fantastyki "SkierCon"' />
+    <meta name="theme-color" content="#f4f4f4" />
+    <link rel="icon" href="./favicon.ico" />
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-WV64ZRJ");
+    </script>
+    <!-- End Google Tag Manager -->
+    <style>
+      body {
+        background-color: #f4f4f4;
+        font-family: "Comic Sans MS", cursive, sans-serif;
+        text-align: center;
+        color: #333;
+        margin: 50px;
+      }
+      .countdown {
+        font-size: 48px;
+        margin: 20px;
+      }
+      .content {
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-WV64ZRJ"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <img src="./logo.png" alt="SkierCon 2024" />
+    <h1>SkierCon&nbsp;2024</h1>
+    <h2>Konwent Letniego Chilloutu</h2>
+    <div class="countdown" id="countdown"></div>
+    <div class="content">
+      <time datetime="2024-07-26 16:00">
+        Data:&nbsp;26.07.2024, Godzina:&nbsp;16:00
+      </time>
+      <p>
+        Miejsce:
+        <a
+          href="https://www.google.com/maps/place/Ckis+Skierniewice/@51.9598932,20.1427675,17z/data=!3m1!4b1!4m6!3m5!1s0x471be099851bc201:0xe3e5e9a6a291a58a!8m2!3d51.95989!4d20.1476384!16s%2Fg%2F11h53w6w78?entry=ttu"
+          >Centrum Kultury i&nbsp;Sztuki w Skierniewicach</a
+        >
+      </p>
+      <p>
+        Nie przegap tej niesamowitej okazji do spotkania z&nbsp;innymi
+        miłośnikami fantastyki!
+      </p>
+    </div>
+
+    <footer>&copy; CF SkierCon 2137</footer>
+
+    <script>
+      function updateCountdown() {
+        var eventDate = new Date("2024-07-26T16:00:00");
+        var now = new Date();
+        var distance = eventDate - now;
+
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("countdown").innerText =
+          days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+      }
+
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+    </script>
+  </body>
+</html>
